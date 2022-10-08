@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="taller3.css">
+    <title>Taller 3</title>
+</head>
+<body>
+    <h1>Taller 3</h1>
+    <p><h3>Dar click en el botón, para ingresar los números y que se permitan realizar las iteracciones</h3></p>
+
+
+ 
+    <div class="texto">
+    <fieldset>
+    <ul>
+    <h4>En la primera interacción se suman los números ingresados anteriormente</h4>
+    <h4>En la segunda interacción se restan los números ingresados anteriormente</h4>
+    <h4>En la tercera interacción se multiplican los números ingresados anteriormente</h4>
+    <h4>En la cuarta interacción se dividen los números ingresados anteriormente</h4>
+    <h4>En la quinta interacción se tiene el cociente de los números ingresados anteriormente</h4>
+    </ul>
+    </fieldset>
+    </div> 
+
+    
+  <center><br><input type="button" onclick="numeros()" value="Ingresar números"><br></center> 
+    <script>
+       function numeros(){
+        var nu1 = prompt("Ingrese el primer numero:");
+        var nu2 = prompt("Ingrese el segundo numero:");
+        var cantidad1 = parseInt(nu1);
+        var cantidad2 = parseInt(nu2);
+        var ciclo = 0;   
+        var suma = cantidad1 + cantidad2;
+        var rest = cantidad1 - cantidad2;
+        var muli = cantidad1 * cantidad2;
+        var divi = cantidad1 / cantidad2;
+        var mod = cantidad1 % cantidad2;
+
+        while(ciclo < 5){   
+            if(ciclo==0){
+                alert("El resultado de la suma es: "+suma);
+            }            
+            if(ciclo==1){
+                alert("El resultado de la resta es: "+rest);
+            }
+            if(ciclo==2){
+                alert("El resultado de la multiplicacion es: "+muli);
+            }
+            if(ciclo==3){
+                alert("El resultado de la division es: "+divi);
+            }
+            if(ciclo==4){
+                alert("El cociente de la division es: "+mod);
+            }
+           
+            ciclo++;
+        } 
+    } 
+    </script>
+</body>
+</html>

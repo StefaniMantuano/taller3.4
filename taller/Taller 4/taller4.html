@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="taller4.css">
+        <title>Taller 4</title>
+    </head>
+    <body>
+        <h1>Taller 4</h1>
+        <div class="boot">
+        <fieldset>
+            <h3>Transformar la hora actual en segundos</h3>
+        <center><input type="button" onclick="hora()" value="Hora-segundos" > <br></center>
+        <script>
+
+            function hora()
+            {
+            let timeNow = new Date();
+            let hours = timeNow.getHours().toString().length < 2 ? "0" + timeNow.getHours() : timeNow.getHours();
+            let convertir;
+            convertir = hours*3600;
+            alert("La hora actual es:  " + hours + " y la conversión a segundos es: " + convertir + " segundos");
+            }
+        </script>
+
+
+        </fieldset> 
+        
+        
+        <fieldset>
+        <h3>Calcular el área de un triángulo</h3>
+        <center><input type="button" onclick="area()" value="Triangulo área"> <br></center>
+        <script>
+            function area()
+            {
+            let base=parseInt(prompt("Ingresar la base del triángulo: "));
+            let altura=parseInt(prompt("Ingresar la altura del triángulo: "));
+            let area;
+            area = (base * altura)/2
+            alert("El área de un triángulo es: " + area + " cm²");
+            }
+        </script>
+        </fieldset>
+       
+
+        <fieldset>
+    <h3>Calcular la raíz cuadrada de un numero impar, mostrar el resultado con 3 digitos</h3>
+       <center><input type="button" onclick="raiz()" value="Raíz cuadrada"> <br></center> 
+    <script>
+        function raiz()
+        {
+         let numero=parseInt(prompt("Ingresar el número: "));
+         let raiz
+         raiz= Math.sqrt(numero);
+         con3decimales = raiz.toFixed(3);
+         alert("La raíz cuadrada es: " +con3decimales);
+         
+        }
+    </script>
+        </fieldset>
+    
+
+        <fieldset>
+        <h3>Ingresar una cadena de texto y mostrar la longitud de la cadena</h3>
+        <center><input type="button" onclick="cadena()" value="Longitud de la cadena"> <br></center>
+        <script>
+            function cadena()
+            {
+                let text = String(prompt("Ingrese el texto: "));
+                long = (text.length);
+                alert("La longitud del texto ingresado es: " + long);
+            }
+        </script> 
+        </fieldset>
+        
+        
+        <fieldset>
+              <h3>Mostrar la versión del navegador</h3>
+    <center><input type="button" onclick="version()" value="Versión del navegador"> <br></center>
+    <script>
+        function version()
+        {
+            document.write("Nombre y versión del navegador: " + navigator.userAgent);
+        }
+    </script>
+        </fieldset>
+      
+
+    <fieldset>
+    <h3>Mostrar el ancho y la altura de la pantalla</h3>
+    <center><input type="button" onclick="pantalla()" value="Pantalla"> <br></center>
+    <script>
+        function pantalla() 
+        {
+            var altura=screen.height;
+            var ancho=screen.width;
+            alert("La altura de la pantalla es: "+ altura +" pixeles");
+            alert("El ancho de la pantalla es de: "+ ancho +" pixeles");
+        }
+    </script>
+        </fieldset>
+   
+    <fieldset>
+    <h3>Imprimir la página</h3>
+    <center><input type="button" onclick="aceptar()" value="Imprimir"> <br></center> 
+    <script>
+        function aceptar() 
+        {
+            window.print();
+        }
+    </script>
+    </fieldset>
+      
+</div>
+        
+</body>
+    
+    
+</html>
